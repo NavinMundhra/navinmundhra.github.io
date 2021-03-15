@@ -3,17 +3,7 @@
 
 
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,51 +11,16 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
 
 body {
 	line-height: 1;
 }
-
-ol, ul {
+ ul {
 	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
 body {
 	-webkit-text-size-adjust: none;
-}
-
-mark {
-	background-color: transparent;
-	color: inherit;
-}
-
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
 }
 
 /* Basic */
@@ -81,20 +36,7 @@ input, select, textarea {
 	body {
 		background: rgb(0, 0, 0);
 		overflow: hidden;
-	}
-
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
-
-	body, input, select, textarea {
+		
 		color: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 15pt;
@@ -102,6 +44,8 @@ input, select, textarea {
 		letter-spacing: -0.025em;
 		line-height: 1.75em;
 	}
+
+
 
 	a {
 		-moz-transition: border-color 0.2s ease-in-out;
@@ -138,9 +82,12 @@ input, select, textarea {
 			font-weight: 400;
 		}
 
-		.icon > .label {
-			display: none;
+		/* .icon > .label {
+			 display: none; 
 		}
+		.icon >.label:hover{
+			display: visible;
+		} */
 
 		.icon.solid:before {
 			font-weight: 900;
@@ -208,19 +155,6 @@ input, select, textarea {
 /* BG */
 
 	#bg {
-		/*-moz-animation: bg 1500s linear infinite;
-		-webkit-animation: bg 1500s linear infinite;
-		-ms-animation: bg 1500s linear infinite;
-		animation: bg 1500s linear infinite;
-		-moz-backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		backface-visibility: hidden;
-		-moz-transform: translate3d(0,0,0);
-		-webkit-transform: translate3d(0,0,0);
-		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);*/
-	/* Set your background with this */
 
 		background: #1b2033 center;
 		background-repeat: repeat-x;
@@ -547,6 +481,7 @@ input, select, textarea {
 		top: -1em;
 		vertical-align: middle;
 		width: 90%;
+	
 	}
 
 		#header h1 {
@@ -563,7 +498,7 @@ input, select, textarea {
 		}
 
 		#header nav {
-			margin: 1.5em 0 0 0;
+			margin: 2.5em 0 0 0;
 		}
 
 			#header nav li {
@@ -630,34 +565,6 @@ input, select, textarea {
 					animation-delay: 3.75s;
 				}
 
-				#header nav li:nth-child(7) {
-					-moz-animation-delay: 4s;
-					-webkit-animation-delay: 4s;
-					-ms-animation-delay: 4s;
-					animation-delay: 4s;
-				}
-
-				#header nav li:nth-child(8) {
-					-moz-animation-delay: 4.25s;
-					-webkit-animation-delay: 4.25s;
-					-ms-animation-delay: 4.25s;
-					animation-delay: 4.25s;
-				}
-
-				#header nav li:nth-child(9) {
-					-moz-animation-delay: 4.5s;
-					-webkit-animation-delay: 4.5s;
-					-ms-animation-delay: 4.5s;
-					animation-delay: 4.5s;
-				}
-
-				#header nav li:nth-child(10) {
-					-moz-animation-delay: 4.75s;
-					-webkit-animation-delay: 4.75s;
-					-ms-animation-delay: 4.75s;
-					animation-delay: 4.75s;
-				}
-
 			#header nav a {
 				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 				-webkit-touch-callout: none;
@@ -702,7 +609,7 @@ input, select, textarea {
 					}
 
 				#header nav a span {
-					display: none;
+					display: visible;
 				}
 
 /* Footer */
@@ -886,113 +793,7 @@ input, select, textarea {
 			width: 2250px;
 		} }
 
-/* Mobile */
 
-	@media screen and (max-width: 736px) {
-
-		/* Basic */
-
-			body {
-				min-width: 320px;
-			}
-
-			body, input, select, textarea {
-				font-size: 11pt;
-			}
-
-		/* BG */
-
-			@-moz-keyframes bg {
-				0% {
-					-moz-transform: translate3d(0,0,0);
-					-webkit-transform: translate3d(0,0,0);
-					-ms-transform: translate3d(0,0,0);
-					transform: translate3d(0,0,0);
-				}
-
-				100% {
-					-moz-transform: translate3d(-300px,0,0);
-					-webkit-transform: translate3d(-300px,0,0);
-					-ms-transform: translate3d(-300px,0,0);
-					transform: translate3d(-300px,0,0);
-				}
-
-	}
-
-		@-webkit-keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-300px,0,0);
-				-webkit-transform: translate3d(-300px,0,0);
-				-ms-transform: translate3d(-300px,0,0);
-				transform: translate3d(-300px,0,0);
-			}
-			}
-
-		@-ms-keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-300px,0,0);
-				-webkit-transform: translate3d(-300px,0,0);
-				-ms-transform: translate3d(-300px,0,0);
-				transform: translate3d(-300px,0,0);
-			}
-		}
-
-		@keyframes bg {
-			0% {
-				-moz-transform: translate3d(0,0,0);
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			100% {
-				-moz-transform: translate3d(-300px,0,0);
-				-webkit-transform: translate3d(-300px,0,0);
-				-ms-transform: translate3d(-300px,0,0);
-				transform: translate3d(-300px,0,0);
-			}
-		}
-
-		#bg {
-			background-size: 300px auto;
-			width: 900px;
-		}
-
-	/* Header */
-
-		#header h1 {
-			font-size: 2em;
-		}
-
-		#header p {
-			font-size: 1em;
-		}
-
-		#header nav {
-			font-size: 1em;
-		}
-
-			#header nav a:hover {
-				font-size: 1em;
-			}
-
-			#header nav a:active {
-				font-size: 1em;
-			} }
 
 /* Mobile (Portrait) */
 
